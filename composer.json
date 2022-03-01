@@ -14,7 +14,7 @@
         "twig/twig": "*"
     },
     "require-dev": {
-        "phpspec/phpspec": *",
+        "phpspec/phpspec": "*",
         "phpunit/phpunit": "*"
     },
     "config": {
