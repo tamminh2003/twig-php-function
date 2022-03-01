@@ -2,11 +2,10 @@
 
 namespace Umpirsky\Twig\Extension;
 
-use Twig_Extension;
-use Twig_SimpleFunction;
-use BadFunctionCallException;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFunction;
 
-class PhpFunctionExtension extends Twig_Extension
+class PhpFunctionExtension extends AbstractExtension
 {
     private $functions = [
         'uniqid',
@@ -40,7 +39,7 @@ class PhpFunctionExtension extends Twig_Extension
         $twigFunctions = [];
 
         foreach ($this->functions as $function) {
-            $twigFunctions[] = new Twig_SimpleFunction($function, $function);
+            $twigFunctions[] = new TwigFunction($function, $function);
         }
 
         return $twigFunctions;
